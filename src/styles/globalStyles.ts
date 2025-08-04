@@ -2,7 +2,12 @@ import styled, { createGlobalStyle, css } from 'styled-components';
 import { COLORS } from './variables';
 
 const GlobalStyles = createGlobalStyle`
-  
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/SFProDisplay-Regular.otf') format('opentype');
+    
+  }
   
   * {
     margin: 0;
