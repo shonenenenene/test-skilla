@@ -13,6 +13,8 @@ export interface Call {
   time: number; // Продолжительность звонка в секундах (альтернатива duration)
   duration: number; // Дублирует time, иногда приходит вместо него
 
+  contact_name?: string;
+
   // Номера телефонов
   from_number: string; // Номер, с которого совершён звонок (для исходящих)
   to_number: string; // Номер, на который поступил звонок (для входящих)
@@ -49,6 +51,8 @@ export interface Call {
   person_id: number; // ID пользователя/оператора
   person_name: string; // Имя сотрудника
   person_avatar: string; // URL аватара сотрудника (может быть null)
+
+  contact_company: string;
 
   // Дополнительно:
   is_skilla: boolean; // Является ли звонок сделанным через Skilla-интерфейс

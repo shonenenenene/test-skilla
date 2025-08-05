@@ -19,7 +19,7 @@ const CallsList = () => {
 
   if (isLoading) return <div>Loading...</div>;
 
-  data?.results.map((call) => console.log(call.person_avatar));
+  data?.results.map((call) => console.log(call));
 
   return (
     <CallsListWr>
