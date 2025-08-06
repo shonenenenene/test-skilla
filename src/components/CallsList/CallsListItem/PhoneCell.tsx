@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
+
+  align-items: start;
+  width: 325px;
+  pa: 13px 0;
 `;
 
 const PhoneCell = ({

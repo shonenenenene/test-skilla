@@ -20,23 +20,24 @@ const GlobalStyles = createGlobalStyle`
 		//border: 1px pink solid;
     //outline: 1px pink solid;
     ::selection {
-			color: black;
-			background-color: ${COLORS.gray2};
+			color: ${COLORS.text};
+			background-color: ${COLORS.ui_icon};
 		}
   }
 
   html {
     scroll-behavior: smooth;
     scroll-padding: 0;
+
     /* overflow-y: scroll; */
   }
 
   body {
     width: 100%;
     overflow-x: hidden;
-  	min-height: 105vh; // чтобы при навигации между роутами ебаный скролл не дергал контент 
+  	min-height: 105vh; 
     max-width: 100vw;
-    background-color: ${COLORS.axe_main};
+    background-color: ${COLORS.border};
     color: inherit;
   }
   
@@ -97,29 +98,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   
-`;
-
-export const SectionPaddings = css`
-  padding: 0 40px;
-`;
-
-export const SectionStyles = css`
-  height: 100%;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  ${SectionPaddings};
-`;
-
-export const SectionWr = styled.section`
-  ${SectionStyles}
-`;
-
-export const ErrorBlock = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10vh;
 `;
 
 export default GlobalStyles;

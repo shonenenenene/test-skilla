@@ -1,24 +1,25 @@
+import { Call } from '@/types';
 import Image from 'next/image';
 import { FC } from 'react';
 import styled from 'styled-components';
 
 interface AvatarCellProps {
-  personAvatar: string | null;
+  personAvatar: Call['person_avatar'];
 }
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
-  width: 32px;
+  width: 129px;
   height: 32px;
 `;
 
 const StyledImage = styled(Image)`
   border-radius: 50%;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 32px;
+  height: 32px;
 `;
 
 const DefaultAvatar = styled.div`

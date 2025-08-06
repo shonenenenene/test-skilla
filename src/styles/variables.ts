@@ -7,4 +7,9 @@ export const COLORS = {
   ui_light_red: '#FEE9EF',
   ui_icon: '#ADBFDF',
   ui_secondary: '#D8E4FB',
+  ui_accent: '#002CFB',
+  white: '#fff',
+  ui_bg: 'rgba(212, 223, 243, 0.17)',
+  bg: '#F1F4F9',
+  border: '#EAF0FA',
 };

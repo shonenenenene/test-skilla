@@ -16,6 +16,7 @@
     "react": "19.1.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "19.1.0",
+    "react-h5-audio-player": "^3.10.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-howler": "^5.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "typescript": "^5"

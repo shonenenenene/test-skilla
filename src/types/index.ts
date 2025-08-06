@@ -50,9 +50,9 @@ export interface Call {
   // ID сотрудника, который принял/совершил звонок
   person_id: number; // ID пользователя/оператора
   person_name: string; // Имя сотрудника
-  person_avatar: string; // URL аватара сотрудника (может быть null)
+  person_avatar: string | null; // URL аватара сотрудника (может быть null)
 
-  contact_company: string;
+  contact_company?: string;
 
   // Дополнительно:
   is_skilla: boolean; // Является ли звонок сделанным через Skilla-интерфейс

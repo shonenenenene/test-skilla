@@ -25,11 +25,15 @@ const TypeCell = ({ status, inOut }: TypeCellProps) => {
 };
 
 const Wrapper = styled.div`
-  width: 24px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 54px;
   height: 24px;
+
   svg {
-    width: 100%;
-    height: 100%;
+    width: 24px;
+    height: 24px;
   }
 `;
 

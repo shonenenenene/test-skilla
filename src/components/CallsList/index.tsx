@@ -4,6 +4,7 @@ import { getDefaultDateRange } from '@/utils/date';
 import React, { useState } from 'react';
 import { styled } from 'styled-components';
 import CallsListItem from './CallsListItem';
+import { COLORS } from '@/styles/variables';
 
 const CallsList = () => {
   const { date_start, date_end } = getDefaultDateRange();
@@ -19,17 +20,24 @@ const CallsList = () => {
 
   if (isLoading) return <div>Loading...</div>;
 
-  data?.results.map((call) => console.log(call));
+  data?.results.map((call) => console.log(call.contact_name));
 
   return (
     <CallsListWr>
-      {data?.results.map((call) => (
-        <CallsListItem key={call.id} data={call} />
-      ))}
+      <ul>
+        {data?.results.map((call) => (
+          <CallsListItem key={call.id} data={call} />
+        ))}
+      </ul>
     </CallsListWr>
   );
 };
 
-const CallsListWr = styled.section``;
+const CallsListWr = styled.section`
+  width: 1440px;
+
+  margin: 0 auto;
+  background-color: ${COLORS.white};
+`;
 
 export default CallsList;

@@ -6,7 +6,12 @@ interface SourceCellProps {
   lineNumber: string;
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 214px;
+`;
 
 const SourceCell = ({ lineNumber }: SourceCellProps) => {
   return (

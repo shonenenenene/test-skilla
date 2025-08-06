@@ -7,7 +7,12 @@ interface TimeCellProps {
   date: string;
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 88px;
+`;
 
 const TimeCell = ({ date }: TimeCellProps) => {
   const formattedTime = format(parseISO(date), 'HH:mm', {

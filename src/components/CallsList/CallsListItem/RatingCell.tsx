@@ -47,21 +47,35 @@ const styleMap = {
   },
 } as const;
 
-const RatingCellContainer = styled(P1)<{ $variant: RatingVariant }>`
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+`;
+
+const RatingCellP = styled(P1)<{ $variant: RatingVariant }>`
   height: fit-content;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+
   padding: 6px 8px;
   border-radius: 4px;
   border: 1px solid ${({ $variant }) => styleMap[$variant].border};
   background: ${({ $variant }) => styleMap[$variant].background};
   color: ${({ $variant }) => styleMap[$variant].text};
+
+  white-space: nowrap;
 `;
 
 const RatingCell = ({ id }: RatingCellProps) => {
   const rating = getRatingFromId(id);
-  return <RatingCellContainer $variant={rating}>{ratingTextMap[rating]}</RatingCellContainer>;
+  return (
+    <Wrapper>
+      <RatingCellP $variant={rating}>{ratingTextMap[rating]}</RatingCellP>
+    </Wrapper>
+  );
 };
 
 export default RatingCell;
